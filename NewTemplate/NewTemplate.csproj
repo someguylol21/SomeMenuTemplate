@@ -1,0 +1,570 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<OutputPath>build/</OutputPath>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>NewTemplate</RootNamespace>
+		<LangVersion>default</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyName>NewTemplate</AssemblyName>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/net6/0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/net6/MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/net6/Il2CppInterop.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Common">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/net6/Il2CppInterop.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAssistantCoreSDKRuntime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppAssistantCoreSDKRuntime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBakeryRuntimeAssembly">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppBakeryRuntimeAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCebinae">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppCebinae.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCinemachine">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppCinemachine.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCyanilux.BlitRenderFeature">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppCyanilux.BlitRenderFeature.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDissonanceVoip">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppDissonanceVoip.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFacebook.Wit.Dictation">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppFacebook.Wit.Dictation.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFusion.Addressables">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppFusion.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFusion.Common">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppFusion.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFusion.Realtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppFusion.Realtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFusion.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppFusion.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFusion.Sockets">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppFusion.Sockets.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLIV.LCK">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppLIV.LCK.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLIV.NativeAudioBridge">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppLIV.NativeAudioBridge.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLMNL.QuestCam.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppLMNL.QuestCam.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeshBakerCore">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeshBakerCore.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Hub.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Hub.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Samples.BuiltInTimer">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Samples.BuiltInTimer.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Samples.Chess">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Samples.Chess.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Samples.Dictation">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Samples.Dictation.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Samples.LightTraits">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Samples.LightTraits.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Samples.LiveUnderstanding">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Samples.LiveUnderstanding.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Samples.Shapes">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Samples.Shapes.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Samples.ShapesConduit">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Samples.ShapesConduit.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.Voice.Samples.TTSVoices">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.Voice.Samples.TTSVoices.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.VoiceSDK.Mic.Common">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.VoiceSDK.Mic.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.VoiceSDK.Mic.Other">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.VoiceSDK.Mic.Other.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.WitAi.Conduit">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.WitAi.Conduit.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.WitAi.Lib">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.WitAi.Lib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.WitAi.TTS">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.WitAi.TTS.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.WitAi">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.WitAi.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMeta.XR.BuildingBlocks">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMeta.XR.BuildingBlocks.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMirrorsAndReflections">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMirrorsAndReflections.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMono.Security">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppMono.Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNanoSockets">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppNanoSockets.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNativeGallery.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppNativeGallery.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNativeGallery">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppNativeGallery.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNewtonsoft.Json">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppNewtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.AudioManager">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppOculus.AudioManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.Interaction.OVR.Samples">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppOculus.Interaction.OVR.Samples.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.Interaction.OVR">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppOculus.Interaction.OVR.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.Interaction">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppOculus.Interaction.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.LipSync">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppOculus.LipSync.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.Platform">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppOculus.Platform.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.Spatializer">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppOculus.Spatializer.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.VR">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppOculus.VR.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhoton3Unity3D">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhoton3Unity3D.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhotonChat">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhotonChat.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhotonRealtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhotonRealtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhotonUnityNetworking.Utilities">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhotonUnityNetworking.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhotonUnityNetworking">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhotonUnityNetworking.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhotonVoice.API">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhotonVoice.API.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhotonVoice.Fusion">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhotonVoice.Fusion.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhotonVoice.PUN">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhotonVoice.PUN.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhotonVoice">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPhotonVoice.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPlayFab">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppPlayFab.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSonicBloom.Koreo">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSonicBloom.Koreo.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Configuration">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Core">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Data">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Globalization">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Globalization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Net.Http">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Net.Http.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Numerics">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Numerics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime.Serialization">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Runtime.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml.Linq">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Xml.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.Xml.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTayx.Graphy">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppTayx.Graphy.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVoiceSDK.Dictation.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppVoiceSDK.Dictation.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVoiceSDK.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2CppVoiceSDK.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cpp__Generated">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2Cpp__Generated.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppcom.rlabrecque.steamworks.net">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2Cppcom.rlabrecque.steamworks.net.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppmscorlib">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2Cppmscorlib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppwebsocket-sharp">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Il2Cppwebsocket-sharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Animation.Rigging">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.Animation.Rigging.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.PlayerPrefsEditor.Samples.SampleScene">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.PlayerPrefsEditor.Samples.SampleScene.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Postprocessing.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder.KdTree">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.ProBuilder.KdTree.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder.Poly2Tri">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.ProBuilder.Poly2Tri.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.ProBuilder.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualEffectGraph.Runtime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.ARSubsystems">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.CoreUtils">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.CoreUtils.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.Interaction.Toolkit">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.Interaction.Toolkit.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.Management">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.Management.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.Oculus">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.Oculus.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.OpenXR.Features.MockRuntime">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.OpenXR.Features.MockRuntime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.OpenXR.Features.RuntimeDebugger.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.XR.OpenXR">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/Unity.XR.OpenXR.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ProfilerModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.ProfilerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpatialTracking">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsNativeModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UIElementsNativeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UNETModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UNETModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityTestProtocolModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>/home/someguy/.steam/steam/steamapps/common/Capuchin/MelonLoader/Il2CppAssemblies/UnityEngine.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Classes/ClampColor.cs" />
+		<Compile Include="Classes/TransformFollower.cs" />
+		<Compile Include="Classes\ButtonCollider.cs" />
+		<Compile Include="Classes\ButtonInfo.cs" />
+		<Compile Include="Classes\ColorChanger.cs" />
+		<Compile Include="Classes\ExtGradient.cs" />
+		<Compile Include="Classes\RigManager.cs" />
+		<Compile Include="Classes\TimedBehaviour.cs" />
+		<Compile Include="Controls.cs" />
+		<Compile Include="Core.cs" />
+		<Compile Include="Menu\Buttons.cs" />
+		<Compile Include="Menu\Main.cs" />
+		<Compile Include="Menu\Settings.cs" />
+		<Compile Include="Mods\Global.cs" />
+		<Compile Include="Mods\Settings.cs" />
+		<Compile Include="Patches\AllPatches.cs" />
+		<Compile Include="PluginInfo.cs" />
+	</ItemGroup>
+	<!--
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="cp $(TargetPath) /home/someguy/.steam/steam/steamapps/common/Capuchin/Mods" />
+		<Exec Command="echo donethis" />
+	</Target>
+	-->
+</Project>
