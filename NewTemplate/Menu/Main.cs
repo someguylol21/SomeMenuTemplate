@@ -529,8 +529,7 @@ namespace NewTemplate.Menu
             }
             else if (button.buttonType == ButtonType.DISCONNECT)
             {
-                FusionHub.Runner.DisconnectFromCloud();
-                tooltipTextComponent.text = "Disconnects you from the room";
+                tooltipTextComponent.text = "Disconnects you from the room (TO BE IMPLEMENTED, OLD VERSION IS BANNABLE EASILY)";
             }
             else
             {
@@ -583,3 +582,4 @@ namespace NewTemplate.Menu
         }
     }
 }
+
