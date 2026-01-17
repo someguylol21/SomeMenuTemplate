@@ -529,7 +529,7 @@ namespace NewTemplate.Menu
             }
             else if (button.buttonType == ButtonType.DISCONNECT)
             {
-                tooltipTextComponent.text = "Disconnects you from the room (TO BE IMPLEMENTED, OLD VERSION IS BANNABLE EASILY)";
+                tooltipTextComponent.text = "Mod removed for.... some reasons.";
             }
             else
             {
@@ -582,4 +582,5 @@ namespace NewTemplate.Menu
         }
     }
 }
+
 
