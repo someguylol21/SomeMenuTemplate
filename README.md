@@ -1,3 +1,4 @@
+NOTE: Please do not steal any code from iidk's main mod menu and port it over into here. If you do that then you would need to make the project open sourced under the GNU General Public License v3.0 (Aka. GPL 3.0)
 # SomeMenuTemplate
 IIdk's template ported into capuchin
 
